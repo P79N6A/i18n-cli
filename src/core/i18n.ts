@@ -46,6 +46,8 @@ export const i18n = {
    * 初始化当前语言的国际化配置
    */
   init: ({ translation }: I18NInitOptions) => {
+
+    debugger;
     if (hasInited) {
       console.warn('你已经初始化过 i18n，请勿重复初始化');
       return;
@@ -77,6 +79,8 @@ export const i18n = {
    * 详细的标记说明，请参考 http://tapd.oa.com/QCloud_2015/markdown_wikis/view/#1010103951008390841
    */
   t: (sentence: string, options?: I18NTranslationOptions) => {
+
+    debugger;
     const key = hashKey(sentence);
     return i18next.t(key, { ...(options || {}), defaultValue: sentence });
   },
