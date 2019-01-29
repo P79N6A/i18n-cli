@@ -7,7 +7,7 @@ module.exports = {
         exclude: [/node_modules/]
       },
       {
-        test: /\.jsx$/,
+        test: /\.(jsx|js)$/,
         loader: ['babel-loader'],
         exclude: [/node_modules/]
        
@@ -26,7 +26,6 @@ module.exports = {
     extensions: ['.jsx', '.js', '.tsx', '.ts']
   },
   externals: {
-    'babel-polyfill': 'null',
-    react: 'window.React'
+    'babel-polyfill': 'null'
   }
 };

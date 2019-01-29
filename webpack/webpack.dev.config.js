@@ -6,8 +6,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 var webpackCommon = require('./webpack.common');
 
 module.exports = {
-  mode: 'development',
-  "target": "node",
+  context: path.resolve(__dirname),
+  mode: 'none',
   devtool: 'source-map', //'source-map', 调试时需要开启
   entry: {
     //开发时入口
